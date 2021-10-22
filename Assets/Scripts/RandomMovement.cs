@@ -35,8 +35,14 @@ public class RandomMovement : MonoBehaviour
             {
                 waitTime -= Time.deltaTime;
             } 
-
+            
         }
+
+
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+    }
 }
