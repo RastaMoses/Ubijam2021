@@ -20,6 +20,7 @@ public class BesenMovement : MonoBehaviour
 
     public void NewTarget()
     {
+        
         targetList = Physics2D.OverlapCircleAll(transform.position, circleRadius, targetLayer);
         if (targetList.Length == 0)
         {
@@ -27,6 +28,10 @@ public class BesenMovement : MonoBehaviour
         }
         else
         {
+            if(targetList[0] == null)
+            {
+                target = targetList[1].transform;
+            }
             target = targetList[0].transform;
         }
         aiSeeker.GetComponent<BesenAISeeker>().SetTarget(target);

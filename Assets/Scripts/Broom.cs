@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Broom : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void SetNewTarget()
     {
-        
+        GetComponent<BesenMovement>().NewTarget();
+    
     }
 
     // Update is called once per frame

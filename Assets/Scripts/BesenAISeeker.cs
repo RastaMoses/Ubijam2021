@@ -13,5 +13,8 @@ public class BesenAISeeker : MonoBehaviour
     void Update()
     {
         transform.position = target.transform.position;
+        if(!target){
+            FindObjectOfType<BesenMovement>().NewTarget();
+        }
     }
 }
