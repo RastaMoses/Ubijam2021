@@ -18,6 +18,7 @@ public class SpiderWeb : MonoBehaviour
         }
         else if (collision.gameObject.GetComponent<Broom>())
         {
+            collision.gameObject.GetComponent<Broom>().SetNewTarget();
             DestroySelf();
         }
     }
@@ -25,6 +26,7 @@ public class SpiderWeb : MonoBehaviour
 
     public void DestroySelf()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        Destroy(gameObject);       
     }
 }
