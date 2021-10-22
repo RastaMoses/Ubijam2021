@@ -12,9 +12,14 @@ public class BesenAISeeker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = target.transform.position;
-        if(!target){
+        
+        if(target.gameObject == null)
+        {
             FindObjectOfType<BesenMovement>().NewTarget();
+        }
+        else
+        {
+            transform.position = target.transform.position;
         }
     }
 }
