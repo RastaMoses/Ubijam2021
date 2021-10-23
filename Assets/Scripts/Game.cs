@@ -39,8 +39,15 @@ public class Game : MonoBehaviour
     {
         currentMana--;
         //Update UI
+        if (currentMana <= 0)
+        {
+            //Lock Spells
+            //Start Game Over Timer
+        }
+
     }
 
+    
 
 
 
