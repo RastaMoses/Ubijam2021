@@ -7,6 +7,7 @@ public class IceCrystal : MonoBehaviour
     public Rigidbody2D rb;
     [SerializeField] Rat[] ratList;
     [SerializeField] Broom[] besenList;
+    [SerializeField] WallMovement[] wallList;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +20,11 @@ public class IceCrystal : MonoBehaviour
             }
             besenList = FindObjectsOfType<Broom>();
             foreach (Broom i in besenList)
+            {
+                i.Freeze();
+            }
+            wallList = FindObjectsOfType<WallMovement>();
+            foreach (WallMovement i in wallList)
             {
                 i.Freeze();
             }
