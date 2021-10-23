@@ -8,6 +8,7 @@ public class PlayerFacing : MonoBehaviour
      //Assign to the object you want to rotate
     Vector3 object_pos;
     float angle;
+    bool gamePaused;
     
     void Start()
     {
@@ -17,6 +18,10 @@ public class PlayerFacing : MonoBehaviour
     
     void Update()
     {
+        if (gamePaused)
+        {
+            return;
+        }
         mouse_pos = Input.mousePosition;
         mouse_pos.z = 5.23f; //The distance between the camera and object
         object_pos = Camera.main.WorldToScreenPoint(transform.position);
@@ -27,7 +32,10 @@ public class PlayerFacing : MonoBehaviour
 
     }
     
-
+    public void SetGamePause(bool paused)
+    {
+        gamePaused = paused;
+    }
     
 
 
