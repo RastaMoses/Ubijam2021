@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7872639736672614004}
   m_Layer: 0
   m_Name: Firebolt
-  m_TagString: Untagged
+  m_TagString: firebolt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440997493158902204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2357, y: -1.468, z: 0}
+  m_LocalPosition: {x: 6.08, y: -2.5, z: 0}
   m_LocalScale: {x: 0.3685, y: 0.396, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -134,5 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9331d8e7ab0b3c843a4f8988959c0b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
   bulletForce: 20

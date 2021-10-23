@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - Mirror
+  - firebolt
+  - Mirror2
   layers:
   - Default
   - TransparentFX
@@ -17,6 +20,7 @@ TagManager:
   - Wall
   - Crystal
   - 
+  - Potion
   - 
   - 
   - 
