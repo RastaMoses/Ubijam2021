@@ -55,6 +55,10 @@ public class Firebolt : MonoBehaviour
         {
             DestroySelf();
         }
+        else if (collision.gameObject.GetComponent<FireCrystal>())
+        {
+            DestroySelf();
+        }
     }
     public void DestroySelf()
     {
