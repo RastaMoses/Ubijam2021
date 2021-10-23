@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6902954214487558427
 Transform:
   m_ObjectHideFlags: 0
@@ -106,7 +106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6902954214546037038
 Transform:
   m_ObjectHideFlags: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   targetList: []
   targetLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 192
   aiSeeker: {fileID: 0}
 --- !u!50 &6902954214546037204
 Rigidbody2D:
@@ -291,7 +291,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &6902954214546037205
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -320,6 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ecd773e5691744d81abf8e10ffa0d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleTimer: 5
 --- !u!1 &6902954215021224792
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6902954215021224795
 Transform:
   m_ObjectHideFlags: 0
