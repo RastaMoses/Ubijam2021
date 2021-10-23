@@ -45,7 +45,7 @@ public class RandomMovement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Firebolt>())
+        if (collision.gameObject.GetComponent<Fire>())
         {
             moveSpots = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
             target.position = moveSpots;
