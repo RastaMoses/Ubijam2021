@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Book : MonoBehaviour
 {
+    Game game;
+    private void Awake()
+    {
+        game = FindObjectOfType<Game>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<Firebolt>() || collision.GetComponent<Rat>())
@@ -19,6 +24,6 @@ public class Book : MonoBehaviour
 
     private void OnDestroy()
     {
-        FindObjectOfType<Game>().BookDestroyed();
+        game.BookDestroyed();
     }
 }
