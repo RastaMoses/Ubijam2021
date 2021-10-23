@@ -16,6 +16,11 @@ public class Gas : MonoBehaviour
         {
             collision.gameObject.GetComponent<Firebolt>().DestroySelf();
         }
+        else if (collision.gameObject.GetComponent<Fire>())
+        {
+            //collision.gameObject.GetComponent<Fire>().DestroySelf();
+            DestroySelf();
+        }
     }
 
     public void DestroySelf()
