@@ -42,6 +42,11 @@ public class Firebolt : MonoBehaviour
             DestroySelf();
         }
         
+        if(collision.gameObject.GetComponent<WallMovement>())
+        {
+            collision.gameObject.GetComponent<WallMovement>().enabled = true;
+            DestroySelf();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -57,4 +62,7 @@ public class Firebolt : MonoBehaviour
         //Destroy(effect, 5f);
         Destroy(gameObject);
     }
+
+  
+    
 }

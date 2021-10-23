@@ -8,7 +8,7 @@ public class BesenMovement : MonoBehaviour
     public Transform target;
     public float speed;
     [SerializeField] float circleRadius;
-    [SerializeField] Collider2D[] targetList;
+    public Collider2D[] targetList;
     [SerializeField] LayerMask targetLayer;
     [SerializeField] Transform aiSeeker;
 
