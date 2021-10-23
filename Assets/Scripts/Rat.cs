@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Rat : MonoBehaviour
 {
-    public Rigidbody2D rb;
     public bool isFrozen = false;
    
     private void OnCollisionEnter2D(Collision2D collision)
@@ -12,7 +11,7 @@ public class Rat : MonoBehaviour
         if(collision.gameObject.GetComponent<Firebolt>())
         {            
             GetComponentInParent<RatSwarm>().StartBurn();
-            rb.velocity = Vector2.zero;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
         if (collision.gameObject.GetComponent<Broom>())
@@ -23,7 +22,7 @@ public class Rat : MonoBehaviour
 
     public void Freeze()
     {
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         Debug.Log("hit");
         GetComponent<Pathfinding.AIPath>().enabled = false;
         GetComponent<RatMovement>().enabled = false;

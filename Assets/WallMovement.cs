@@ -7,7 +7,7 @@ public class WallMovement : MonoBehaviour
     public float speed;
     private float waitTime;
     public float startWaitTime;
-    bool asleep = true;
+    public Rigidbody2D rb;
 
     public Transform[] moveSpots;
     private int randomSpot;
@@ -35,5 +35,11 @@ public class WallMovement : MonoBehaviour
             }
 
         }
+    }
+    public void Freeze()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        Debug.Log("hit");
+        GetComponent<WallMovement>().enabled = false;
     }
 }
