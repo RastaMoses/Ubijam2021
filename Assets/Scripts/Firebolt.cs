@@ -44,6 +44,13 @@ public class Firebolt : MonoBehaviour
         
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.GetComponent<IceCrystal>())
+        {
+            DestroySelf();
+        }
+    }
     public void DestroySelf()
     {
         //GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
