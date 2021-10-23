@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 6902954214546037207}
   - component: {fileID: 6902954214546037204}
   - component: {fileID: 6902954214546037205}
+  - component: {fileID: 1712128223}
   m_Layer: 0
   m_Name: Besen
   m_TagString: Untagged
@@ -113,7 +114,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6902954214546037039}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.716761, y: 0.25034535, z: 0}
   m_LocalScale: {x: 0.2699, y: 2.8496, z: 1}
   m_Children:
@@ -268,7 +269,7 @@ MonoBehaviour:
   targetList: []
   targetLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 128
   aiSeeker: {fileID: 0}
 --- !u!50 &6902954214546037204
 Rigidbody2D:
@@ -304,9 +305,21 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02694863, y: 0.5079335}
-  m_Size: {x: 2.924609, y: 1.2877661}
+  m_Offset: {x: 0.02694863, y: 0.002552859}
+  m_Size: {x: 2.924609, y: 0.27700445}
   m_Direction: 0
+--- !u!114 &1712128223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6902954214546037039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ecd773e5691744d81abf8e10ffa0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6902954215021224792
 GameObject:
   m_ObjectHideFlags: 0
