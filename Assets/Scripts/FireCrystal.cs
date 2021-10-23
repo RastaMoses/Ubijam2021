@@ -24,4 +24,8 @@ public class FireCrystal : MonoBehaviour
             rb.velocity = collision.GetComponent<Rigidbody2D>().velocity;
         }
     }
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
 }
