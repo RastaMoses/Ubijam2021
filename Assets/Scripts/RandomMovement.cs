@@ -7,6 +7,7 @@ public class RandomMovement : MonoBehaviour
     public float speed;
     private float waitTime;
     public float startWaitTime;
+    [SerializeField] Transform target;
 
     Vector2 moveSpots;
     public float minX;
@@ -19,18 +20,18 @@ public class RandomMovement : MonoBehaviour
         waitTime = startWaitTime;
 
         moveSpots = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        target.position = moveSpots;
     }
     
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, moveSpots, speed * Time.deltaTime);
+        //transform.position = Vector2.MoveTowards(transform.position, moveSpots, speed * Time.deltaTime);
 
         if(Vector2.Distance(transform.position, moveSpots) < 0.2f)
         {
             if(waitTime <= 0){
-                moveSpots = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-                waitTime = startWaitTime;
+                SetTarget();
             }
             else
             {
@@ -44,6 +45,10 @@ public class RandomMovement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        moveSpots = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        if (collision.gameObject.GetComponent<Firebolt>())
+        {
+            moveSpots = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+            target.position = moveSpots;
+        }
     }
 }

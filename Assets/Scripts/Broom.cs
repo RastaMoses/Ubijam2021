@@ -10,9 +10,11 @@ public class Broom : MonoBehaviour
     
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void Freeze()
+    {     
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        Debug.Log("hit");
+        GetComponent<Pathfinding.AIPath>().enabled = false;
+        GetComponent<RatMovement>().enabled = false;
     }
 }
