@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class PlayerFacing : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public Camera cam;
+    public float rotSpeed = 5f;
 
-    Vector2 mousePos;
-
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        Vector2 lookDir = mousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Rotate(new Vector3(0, 0, transform.rotation.z + rotSpeed));
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Rotate(new Vector3(0, 0, transform.rotation.z - rotSpeed));
+        }
     }
 
 }

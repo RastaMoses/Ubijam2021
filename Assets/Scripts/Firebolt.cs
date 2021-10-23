@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Firebolt : MonoBehaviour
 {
-    public GameObject hitEffect;
+    //public GameObject hitEffect;
     int bounces = 0;
 
     public float bulletForce = 20f;

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837832180525641638}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08200002, y: 0.54, z: 0}
+  m_LocalPosition: {x: 0.022, y: 0.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1837832180735604981}
@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 1837832180735604979}
   - component: {fileID: 1837832180735604980}
   - component: {fileID: 1837832180735604978}
+  - component: {fileID: 438494266}
+  - component: {fileID: 438494267}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -166,3 +168,29 @@ MonoBehaviour:
   firePoint: {fileID: 1837832180525641637}
   bulletPrefab: {fileID: 440997493158902204, guid: 2270dac767f2ac946897d78eae876b88, type: 3}
   bulletForce: 20
+--- !u!114 &438494266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837832180735604744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbcb0fb76ad2dc44b0b2ff459f8d745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  wallPrefab: {fileID: 6242227895253943345, guid: a60105f88858fe4458c437c8d50d57ab, type: 3}
+--- !u!114 &438494267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837832180735604744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96e335d3600bde4fae437db8e803d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
