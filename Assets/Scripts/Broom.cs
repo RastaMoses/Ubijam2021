@@ -25,7 +25,7 @@ public class Broom : MonoBehaviour
         yield return new WaitForSeconds(idleTimer);
         if (transform.position == GetComponent<BesenMovement>().target.transform.position)
         {
-            Debug.Log("hi");
+            GetComponent<BesenMovement>().NewTarget();
             if (alreadyTimed)
             {
                 yield return null;
@@ -51,9 +51,9 @@ public class Broom : MonoBehaviour
         GetComponent<Pathfinding.AIPath>().enabled = false;
         GetComponent<RatMovement>().enabled = false;
     }
-   
-
 
     
+
+
 
 }

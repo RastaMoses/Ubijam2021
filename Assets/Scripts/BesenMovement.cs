@@ -20,7 +20,6 @@ public class BesenMovement : MonoBehaviour
 
     public void NewTarget()
     {
-        
         targetList = Physics2D.OverlapCircleAll(transform.position, circleRadius, targetLayer);
         if (targetList.Length == 0)
         {

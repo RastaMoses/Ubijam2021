@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4008063212992673344}
   - component: {fileID: 2397909180351863572}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5988643540910410877}
   - component: {fileID: 677708292076287671}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8568401886179011628}
   - component: {fileID: 975264976427568450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 4856536471195576292}
   - component: {fileID: 4856536471195576299}
   - component: {fileID: 4856536471195576298}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpiderWebs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ Transform:
   m_GameObject: {fileID: 4856536471195576297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.97, y: 5.45, z: 0}
-  m_LocalScale: {x: 0.66413695, y: 0.66413695, z: 0.66413695}
+  m_LocalScale: {x: 0.664137, y: 0.66413695, z: 0.664137}
   m_Children:
   - {fileID: 6698248075036383921}
   - {fileID: 5988643540910410877}
@@ -386,7 +386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246694461796569756}
   - component: {fileID: 3509407057171041016}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -468,7 +468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6698248075036383921}
   - component: {fileID: 1799774338711161992}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
