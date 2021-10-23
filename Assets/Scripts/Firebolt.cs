@@ -47,6 +47,11 @@ public class Firebolt : MonoBehaviour
             collision.gameObject.GetComponent<WallMovement>().enabled = true;
             DestroySelf();
         }
+        if (collision.gameObject.GetComponent<Pathfinding.AIPath>())
+        {
+            collision.gameObject.GetComponent<Pathfinding.AIPath>().enabled = true;
+            DestroySelf();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
