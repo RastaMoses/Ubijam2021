@@ -8,6 +8,7 @@ public class Dirt : MonoBehaviour
 
     private void OnDestroy()
     {
+        
         FindObjectOfType<Game>().UpdateDirtList();
     }
 }
