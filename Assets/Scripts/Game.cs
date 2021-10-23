@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-
+    [SerializeField] int currentMana;
+    [SerializeField] int maxMana = 3;
     [SerializeField] List<Dirt> dirtList;
     
     // Start is called before the first frame update
@@ -15,7 +16,7 @@ public class Game : MonoBehaviour
         {
             dirtList.Add(i);
         }
-        
+        currentMana = maxMana;
     }
 
     public void UpdateDirtList()
@@ -33,11 +34,16 @@ public class Game : MonoBehaviour
 
 
     }
-    // Update is called once per frame
-    void Update()
+    
+    public void LoseMana()
     {
-        
+        currentMana--;
+        //Update UI
     }
+
+
+
+
 
     void Win()
     {
