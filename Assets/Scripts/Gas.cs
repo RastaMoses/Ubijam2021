@@ -14,7 +14,7 @@ public class Gas : MonoBehaviour
 
         else if (collision.gameObject.GetComponent<Firebolt>())
         {
-            return;
+            collision.gameObject.GetComponent<Firebolt>().DestroySelf();
         }
     }
 
