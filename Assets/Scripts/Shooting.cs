@@ -6,13 +6,21 @@ public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    //public bool shoot = false;
+    public GameObject img;
 
     public float bulletForce = 20f;
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        //if (shoot == true)
         {
-            Shoot();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Shoot();
+                //shoot = false;
+                this.enabled = false;
+                img.gameObject.SetActive(false);
+            }
         }
     }
 
