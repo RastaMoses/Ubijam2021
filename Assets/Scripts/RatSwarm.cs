@@ -17,7 +17,7 @@ public class RatSwarm : MonoBehaviour
             i.GetComponent<RandomMovement>().enabled = true;
             StartCoroutine(KillRat());
             i.GetComponent<RandomMovement>().SetTarget();
-            //Change Sprite
+            i.GetComponentInChildren<Animator>().SetTrigger("startRun");
         }
     }
     IEnumerator KillRat()

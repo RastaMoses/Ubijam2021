@@ -39,7 +39,6 @@ public class WallMovement : MonoBehaviour
     public void Freeze()
     {
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        Debug.Log("hit");
         GetComponent<WallMovement>().enabled = false;
     }
 }
