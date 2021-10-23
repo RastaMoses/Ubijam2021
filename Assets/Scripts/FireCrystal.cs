@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FireCrystal : MonoBehaviour
 {
+    [SerializeField] Sprite crystalOff;
     private Transform destination;
     [SerializeField] FireCrystal fc;
     public GameObject firePrefab;
@@ -22,10 +23,12 @@ public class FireCrystal : MonoBehaviour
             collision.transform.position = new Vector2(destination.position.x, destination.position.y);
             Rigidbody2D rb = fire.GetComponent<Rigidbody2D>();
             rb.velocity = collision.GetComponent<Rigidbody2D>().velocity;
+            DestroySelf();
         }
     }
     public void DestroySelf()
     {
-        Destroy(gameObject);
+        GetComponent<CircleCollider2D>().enabled = false;
+        GetComponentInChildren<SpriteRenderer>().sprite = crystalOff;
     }
 }
