@@ -6,8 +6,11 @@ public class Book : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        Destroy(gameObject);
+       if (collision.GetComponent<Firebolt>() || collision.GetComponent<Rat>())
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     private void OnDestroy()

@@ -8,27 +8,28 @@ public class RandomMovement : MonoBehaviour
     private float waitTime;
     public float startWaitTime;
 
-    public Transform moveSpots;
+    Vector2 moveSpots;
     public float minX;
     public float maxX;
     public float minY;
     public float maxY;
 
-    void Start()
+    public void SetTarget()
     {
         waitTime = startWaitTime;
 
-        moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        moveSpots = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
     }
+    
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, moveSpots.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, moveSpots, speed * Time.deltaTime);
 
-        if(Vector2.Distance(transform.position, moveSpots.position) < 0.2f)
+        if(Vector2.Distance(transform.position, moveSpots) < 0.2f)
         {
             if(waitTime <= 0){
-                moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+                moveSpots = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
                 waitTime = startWaitTime;
             }
             else
@@ -43,6 +44,6 @@ public class RandomMovement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        moveSpots = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
     }
 }
