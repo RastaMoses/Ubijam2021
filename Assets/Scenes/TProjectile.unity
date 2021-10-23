@@ -288,6 +288,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 956024029}
   wallPrefab: {fileID: 6242227895253943345, guid: a60105f88858fe4458c437c8d50d57ab, type: 3}
+--- !u!114 &438494267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438494260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96e335d3600bde4fae437db8e803d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &497988667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -457,7 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5030eb60fa84ae4fa3903daab654332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activated: 1
+  activated: 0
   mirror2: {fileID: 1732687744}
   distance: 0.2
   resetTimer: 0.4
@@ -681,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5030eb60fa84ae4fa3903daab654332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activated: 1
+  activated: 0
   mirror2: {fileID: 1184404448}
   distance: 0.2
   resetTimer: 0.4
