@@ -10,10 +10,14 @@ public class Rat : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponent<Firebolt>())
-        {
-            
+        {            
             GetComponentInParent<RatSwarm>().StartBurn();
             rb.velocity = Vector2.zero;
+        }
+
+        if (collision.gameObject.GetComponent<Broom>())
+        {
+            DestroySelf();
         }
     }
 
@@ -25,5 +29,12 @@ public class Rat : MonoBehaviour
         GetComponent<RatMovement>().enabled = false;
     }
 
+    
+
+
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
    
 }
