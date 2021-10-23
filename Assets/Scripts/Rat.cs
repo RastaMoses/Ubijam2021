@@ -8,7 +8,7 @@ public class Rat : MonoBehaviour
    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.GetComponent<Firebolt>())
+        if(collision.gameObject.GetComponent<Fire>())
         {            
             GetComponentInParent<RatSwarm>().StartBurn();
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;

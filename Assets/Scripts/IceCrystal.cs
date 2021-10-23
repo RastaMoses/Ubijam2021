@@ -8,6 +8,7 @@ public class IceCrystal : MonoBehaviour
     [SerializeField] Rat[] ratList;
     [SerializeField] Broom[] besenList;
     [SerializeField] WallMovement[] wallList;
+    [SerializeField] FireCrystal[] frList;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,7 +29,11 @@ public class IceCrystal : MonoBehaviour
             {
                 i.Freeze();
             }
+            frList = FindObjectsOfType<FireCrystal>();
+            foreach(FireCrystal i in frList)
+            {
+                i.DestroySelf();
+            }
         }
     }
-    
 }
