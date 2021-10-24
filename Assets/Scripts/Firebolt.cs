@@ -23,7 +23,7 @@ public class Firebolt : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("mWall") || collision.gameObject.CompareTag("Mirror"))
         {
             FindObjectOfType<SFX>().HitSFX();
             bounces++;
@@ -44,11 +44,6 @@ public class Firebolt : MonoBehaviour
             DestroySelf();
         }
         
-        if(collision.gameObject.GetComponent<WallMovement>())
-        {
-            collision.gameObject.GetComponent<WallMovement>().enabled = true;
-            DestroySelf();
-        }
         if (collision.gameObject.GetComponent<Pathfinding.AIPath>())
         {
             collision.gameObject.GetComponent<Pathfinding.AIPath>().enabled = true;
