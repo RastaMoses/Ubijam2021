@@ -9,6 +9,7 @@ TagManager:
   - firebolt
   - Mirror2
   - FireCrystal
+  - mWall
   layers:
   - Default
   - TransparentFX
