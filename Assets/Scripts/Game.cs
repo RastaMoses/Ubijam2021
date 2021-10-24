@@ -1,12 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
     [SerializeField] int currentMana;
     [SerializeField] int maxMana = 3;
     [SerializeField] List<Dirt> dirtList;
+
+    public float timeRemaining = 10;
+    public bool timerIsRunning = false;
+    public Text timeText;
+
+    public int GetMana()
+    {
+        return currentMana;
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -42,9 +52,35 @@ public class Game : MonoBehaviour
         if (currentMana <= 0)
         {
             //Lock Spells
-            //Start Game Over Timer
-        }
+            GameObject.Find("Player").GetComponent<Shooting>().enabled = false;
+            GameObject.Find("Player").GetComponent<ActivateMirrors>().enabled = false;
 
+            //Start Game Over Timer
+            timerIsRunning = true;
+        }
+    }
+    void Update()
+    {
+        if(timerIsRunning)
+        {
+            if(timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
+            }
+            else
+            {
+                Lose();
+                timeRemaining = 0;
+                timerIsRunning = false;
+            }
+        }
+    }
+    void DisplayTime(float timeToDisplay)
+    {
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+        float milliSeconds = (timeToDisplay % 1) * 1000;
+        timeText.text = string.Format("{0:00}:{1:000}", seconds, milliSeconds);
     }
 
     

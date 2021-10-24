@@ -8,7 +8,13 @@ public class ActivateMirrors : MonoBehaviour
     {
         if (Input.GetKeyDown("s"))
         {
-            Portals();
+            var game = FindObjectOfType<Game>();
+            int mana = game.GetMana();
+            if(mana > 0)
+            {
+                Portals();
+                game.LoseMana();
+            }
         }
     }
 
