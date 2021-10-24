@@ -5,7 +5,12 @@ using UnityEngine;
 public class Rat : MonoBehaviour
 {
     public bool isFrozen = false;
-   
+
+    private void Start()
+    {
+        GetComponent<ParticleSystem>().Stop();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponent<Fire>())
@@ -18,12 +23,13 @@ public class Rat : MonoBehaviour
         {
             DestroySelf();
         }
+
+        
     }
 
     public void Freeze()
     {
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-        Debug.Log("hit");
         GetComponent<Pathfinding.AIPath>().enabled = false;
         GetComponent<RatMovement>().enabled = false;
     }

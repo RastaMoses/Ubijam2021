@@ -98,7 +98,7 @@ public class Game : MonoBehaviour
 
     public void BookDestroyed()
     {
-        Debug.LogError("Book loss");
+        FindObjectOfType<SFX>().BookSFX();
         Lose();
     }
     

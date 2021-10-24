@@ -18,12 +18,14 @@ public class Firebolt : MonoBehaviour
     void Update()
     {
         lastVelocity = rb.velocity;
+        transform.right = rb.velocity.normalized;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
+            FindObjectOfType<SFX>().HitSFX();
             bounces++;
             if(bounces < 3)
             {

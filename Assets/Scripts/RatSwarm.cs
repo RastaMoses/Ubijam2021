@@ -6,10 +6,12 @@ public class RatSwarm : MonoBehaviour
 {
     [SerializeField] List<Rat> ratList;
     [SerializeField] public bool isBurning;
+    [SerializeField] float burnTime;
     
     public void StartBurn()
     {
         isBurning = true;
+        FindObjectOfType<SFX>().BurnSFX();
         foreach (Rat i in ratList)
         {
             //Set AI change
@@ -18,11 +20,12 @@ public class RatSwarm : MonoBehaviour
             StartCoroutine(KillRat());
             i.GetComponent<RandomMovement>().SetTarget();
             i.GetComponentInChildren<Animator>().SetTrigger("startRun");
+            i.GetComponent<ParticleSystem>().Play();
         }
     }
     IEnumerator KillRat()
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(burnTime);
             DestroySwarm();
         }
 

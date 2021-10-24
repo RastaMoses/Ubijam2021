@@ -21,6 +21,10 @@ public class Gas : MonoBehaviour
             //collision.gameObject.GetComponent<Fire>().DestroySelf();
             DestroySelf();
         }
+        else if (collision.gameObject.GetComponent<Rat>())
+        {
+            collision.gameObject.GetComponent<Rat>().DestroySelf();
+        }
     }
 
     public void DestroySelf()

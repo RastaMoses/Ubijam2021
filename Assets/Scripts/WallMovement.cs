@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WallMovement : MonoBehaviour
 {
+    [SerializeField] bool activated;
+
     public float speed;
     private float waitTime;
     public float startWaitTime;
@@ -20,6 +22,11 @@ public class WallMovement : MonoBehaviour
 
     void Update()
     {
+        if (!activated)
+        {
+            return;
+        }
+
         transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
@@ -40,5 +47,14 @@ public class WallMovement : MonoBehaviour
     {
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         GetComponent<WallMovement>().enabled = false;
+    }
+    public void SetActivated(bool activate)
+    {
+        activated = activate;
+    }
+
+    public void Activate()
+    {
+        SetActivated(true);
     }
 }
