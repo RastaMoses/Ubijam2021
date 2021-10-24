@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d158bd43e64642d40952f91ef921fe85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxSlider: {fileID: 0}
   gasClip: {fileID: 8300000, guid: f2f34d15256a65149b1c46ac61fd86ae, type: 3}
   ratClips:
   - {fileID: 8300000, guid: 5c63004eca59acd4ca50a69c4f40d1bb, type: 3}
