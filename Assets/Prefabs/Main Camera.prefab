@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8025830151545391737}
   - component: {fileID: 8025830151545391738}
   - component: {fileID: 8025830151545391739}
+  - component: {fileID: 1063489342041840466}
+  - component: {fileID: 3171109239132272954}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -83,3 +85,128 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8025830151545391740}
   m_Enabled: 1
+--- !u!82 &1063489342041840466
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8025830151545391740}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: dc589a3932b21e046bc54d7698681a31, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &3171109239132272954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8025830151545391740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d158bd43e64642d40952f91ef921fe85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gasClip: {fileID: 8300000, guid: f2f34d15256a65149b1c46ac61fd86ae, type: 3}
+  ratClips:
+  - {fileID: 8300000, guid: 5c63004eca59acd4ca50a69c4f40d1bb, type: 3}
+  - {fileID: 8300000, guid: 735da4cee4d57dd44949f083760ccc0a, type: 3}
+  - {fileID: 8300000, guid: 05fc5dc24b4718440b5f5bc83c0b13fd, type: 3}
+  - {fileID: 8300000, guid: bdc048e8fbc25564e814df03555bb0fd, type: 3}
+  - {fileID: 8300000, guid: 0cd33da5fa0e7ca43a180443fe31b972, type: 3}
+  burnClip: {fileID: 8300000, guid: 3c6bdc8c56e2ba84db357004439741ad, type: 3}
+  iceClip: {fileID: 8300000, guid: bc98a9665eb093344b8deefe8d08560d, type: 3}
+  cobwebClip: {fileID: 8300000, guid: ae7baf20c67dc504a9c2341a45e70c7e, type: 3}
+  fireClip: {fileID: 8300000, guid: 68fd805cd51885b498f571beb086a749, type: 3}
+  energyClip: {fileID: 8300000, guid: 2e215be972729b14689c6aebc09d2365, type: 3}
+  hitClip: {fileID: 8300000, guid: 5226cdcfe290b024ba7a69cabfceefde, type: 3}
+  teleportClip: {fileID: 8300000, guid: ea587b7dd04d43b41a73d836e38bfaaf, type: 3}
+  bookClip: {fileID: 8300000, guid: de66e79598a7bc743ba7800e5b50b6a9, type: 3}
+  wallClip: {fileID: 8300000, guid: bd443c45cac22e841ad3061bf0b401b4, type: 3}
+  broomClip: {fileID: 8300000, guid: 153a15caa48270846b8f55da2b6a054d, type: 3}
