@@ -18,12 +18,13 @@ public class Rat : MonoBehaviour
         {
             DestroySelf();
         }
+
+        
     }
 
     public void Freeze()
     {
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-        Debug.Log("hit");
         GetComponent<Pathfinding.AIPath>().enabled = false;
         GetComponent<RatMovement>().enabled = false;
     }
