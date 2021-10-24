@@ -18,6 +18,7 @@ public class Firebolt : MonoBehaviour
     void Update()
     {
         lastVelocity = rb.velocity;
+        transform.right = rb.velocity.normalized;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

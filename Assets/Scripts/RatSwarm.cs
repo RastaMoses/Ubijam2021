@@ -6,6 +6,7 @@ public class RatSwarm : MonoBehaviour
 {
     [SerializeField] List<Rat> ratList;
     [SerializeField] public bool isBurning;
+    [SerializeField] float burnTime;
     
     public void StartBurn()
     {
@@ -22,7 +23,7 @@ public class RatSwarm : MonoBehaviour
     }
     IEnumerator KillRat()
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(burnTime);
             DestroySwarm();
         }
 

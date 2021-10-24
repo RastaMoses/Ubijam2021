@@ -26,6 +26,13 @@ public class SpiderWeb : MonoBehaviour
             collision.gameObject.GetComponent<Fire>().DestroySelf();
             DestroySelf();
         }
+        else if (collision.gameObject.GetComponent<Rat>())
+        {
+            if (collision.gameObject.GetComponentInParent<RatSwarm>().isBurning)
+            {
+                DestroySelf();
+            }
+        }
     }
 
     public void DestroySelf()
