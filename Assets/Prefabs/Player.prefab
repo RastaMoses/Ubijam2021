@@ -143,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 1837832180735604744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.44, y: -4.25, z: 0}
-  m_LocalScale: {x: 0.664137, y: 0.66413695, z: 0.664137}
+  m_LocalScale: {x: 0.66413695, y: 0.66413695, z: 0.664137}
   m_Children:
   - {fileID: 1837832180525641637}
   - {fileID: 324954380}
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img: {fileID: 0}
-  tolerance: 0
+  tolerance: 30
 --- !u!58 &720218755
 CircleCollider2D:
   m_ObjectHideFlags: 0

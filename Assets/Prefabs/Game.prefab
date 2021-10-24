@@ -44,8 +44,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMana: 0
-  maxMana: 3
+  maxMana: 4
   dirtList: []
+  mana3: {fileID: 0}
+  mana4: {fileID: 0}
+  manaSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  manaGrey: {fileID: 21300000, guid: 692fffbfcdc8b9b4db62c0d871a0a1e3, type: 3}
   timeRemaining: 6
   timerIsRunning: 0
   win: 0

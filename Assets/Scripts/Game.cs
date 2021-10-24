@@ -9,6 +9,12 @@ public class Game : MonoBehaviour
     [SerializeField] int maxMana = 3;
     [SerializeField] List<Dirt> dirtList;
 
+    [SerializeField] GameObject mana3;
+    [SerializeField] GameObject mana4;
+
+    [SerializeField] Image[] manaSprites;
+    [SerializeField] Sprite manaGrey;
+
     [SerializeField] float timeRemaining = 10f;
     public bool timerIsRunning = false;
     public bool win = false;
@@ -22,6 +28,58 @@ public class Game : MonoBehaviour
         return currentMana;
     }
 
+    void RenderMana()
+    {
+        if (maxMana == 3)
+        {
+
+            mana3.SetActive(true);
+            mana4.SetActive(false);
+
+            Debug.Log("Render Mana");
+            if (currentMana == 3)
+            {
+                return;
+            }
+            else if (currentMana == 2)
+            {
+                manaSprites[0].sprite = manaGrey;
+            }
+            else if (currentMana == 1)
+            {
+                manaSprites[1].sprite = manaGrey;
+            }
+            else
+            {
+                manaSprites[2].sprite = manaGrey;
+            }
+        }
+        if (maxMana == 4)
+        {
+            mana4.SetActive(true);
+            mana3.SetActive(false);
+            Debug.Log("Render Mana");
+            if (currentMana == 3)
+            {
+                manaSprites[0].sprite = manaGrey;
+                manaSprites[0].color = Color.white;
+            }
+            else if (currentMana == 2)
+            {
+                manaSprites[1].sprite = manaGrey;
+            }
+            else if (currentMana == 1)
+            {
+                manaSprites[2].sprite = manaGrey;
+            }
+            else if (currentMana==0)
+            {
+                manaSprites[3].sprite = manaGrey;
+            }
+        }
+
+    }
+
     
     // Start is called before the first frame update
     void Start()
@@ -32,6 +90,7 @@ public class Game : MonoBehaviour
             dirtList.Add(i);
         }
         currentMana = maxMana;
+        RenderMana();
         Time.timeScale = 1;
     }
 
@@ -54,6 +113,7 @@ public class Game : MonoBehaviour
     public void LoseMana()
     {
         currentMana--;
+        RenderMana();
         //Update UI
         if (currentMana <= 0)
         {
