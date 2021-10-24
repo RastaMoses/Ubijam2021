@@ -24,6 +24,7 @@ public class RatMovement : MonoBehaviour
         if(Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
         {
             if(waitTime <= 0){
+                FindObjectOfType<SFX>().RatSFX();
                 randomSpot = Random.Range(0, moveSpots.Length);
                 waitTime = startWaitTime;
             }

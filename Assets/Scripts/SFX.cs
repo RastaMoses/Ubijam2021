@@ -39,7 +39,7 @@ public class SFX : MonoBehaviour
         AudioSource.PlayClipAtPoint(bookClip, transform.position);
     }
 
-    public void ratFX()
+    public void RatSFX()
     {
         var i = Random.Range(0, ratClips.Length);
         var stickClip = ratClips[i];
