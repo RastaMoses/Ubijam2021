@@ -24,7 +24,7 @@ public class Book : MonoBehaviour
 
     public void Destroyed()
     {
-        game.UpdateDirtList();
+        game.BookDestroyed();
         Destroy(gameObject);
     }
 }
