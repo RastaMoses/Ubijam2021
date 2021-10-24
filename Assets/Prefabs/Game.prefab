@@ -43,4 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b099705b3f08c3e46ade46158b72a8e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentMana: 0
+  maxMana: 3
   dirtList: []
+  timeRemaining: 6
+  timerIsRunning: 0
+  win: 0
+  playerUI: {fileID: 0}
+  pauseUI: {fileID: 0}
+  gameOverUI: {fileID: 0}
