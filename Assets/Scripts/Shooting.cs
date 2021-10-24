@@ -16,10 +16,16 @@ public class Shooting : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                Shoot();
-                //shoot = false;
-                this.enabled = false;
-                img.gameObject.SetActive(false);
+                var game = FindObjectOfType<Game>();
+                int mana = game.GetMana();
+                if (mana > 0)
+                {
+                    Shoot();
+                    //shoot = false;
+                    game.LoseMana();
+                    this.enabled = false;
+                    img.gameObject.SetActive(false);
+                }
             }
         }
     }
