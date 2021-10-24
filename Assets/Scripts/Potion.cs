@@ -7,6 +7,7 @@ public class Potion : MonoBehaviour
     [SerializeField] GameObject gasPrefab;
     public void GasCloud()
     {
+        FindObjectOfType<SFX>().GasSFX();
         Instantiate(gasPrefab,transform.position,Quaternion.identity);
         Destroy(gameObject);
     }

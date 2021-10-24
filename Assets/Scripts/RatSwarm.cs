@@ -11,6 +11,7 @@ public class RatSwarm : MonoBehaviour
     public void StartBurn()
     {
         isBurning = true;
+        FindObjectOfType<SFX>().BurnSFX();
         foreach (Rat i in ratList)
         {
             //Set AI change
