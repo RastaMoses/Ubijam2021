@@ -6,6 +6,7 @@ public class Teleport : MonoBehaviour
 {
     [SerializeField] bool activated;
     [SerializeField] Teleport mirror2;
+    [SerializeField] Sprite activatedSprite;
     private Transform destination;
     public float distance = 0.2f;
     [SerializeField] float resetTimer = 0.5f;
@@ -57,11 +58,16 @@ public class Teleport : MonoBehaviour
     public void SetActivated(bool activate)
     {
         activated = activate;
+        var spriteList = GetComponentsInChildren<SpriteRenderer>();
+        foreach(SpriteRenderer i in spriteList)
+        {
+            i.sprite = activatedSprite;
+        }
     }
 
     public void ActivateBoth()
     {
-        activated = true;
+        SetActivated(true);
         mirror2.SetActivated(true);
     }
 }
