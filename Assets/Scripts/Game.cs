@@ -9,7 +9,7 @@ public class Game : MonoBehaviour
     [SerializeField] int maxMana = 3;
     [SerializeField] List<Dirt> dirtList;
 
-    [SerializeField] float timeRemaining;
+    [SerializeField] float timeRemaining = 10f;
     public bool timerIsRunning = false;
     public bool win = false;
 

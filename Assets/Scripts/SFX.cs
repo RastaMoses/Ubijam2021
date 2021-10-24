@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SFX : MonoBehaviour
 {
+    [SerializeField] Slider sfxSlider;
+
     [SerializeField] AudioClip gasClip;
     [SerializeField] AudioClip[] ratClips;
     [SerializeField] AudioClip burnClip;
@@ -21,6 +23,7 @@ public class SFX : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        sfxSlider.value = 0.5f;
     }
     public void GasSFX()
     {
@@ -83,6 +86,11 @@ public class SFX : MonoBehaviour
     {
         audioSource.clip = broomClip;
         audioSource.Play();
+    }
+
+    private void Update()
+    {
+        audioSource.volume = sfxSlider.value;
     }
 }
 
