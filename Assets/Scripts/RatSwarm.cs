@@ -34,7 +34,7 @@ public class RatSwarm : MonoBehaviour
 
         foreach (Rat i in ratList)
           {
-            Object.Destroy(i);
+            i.DestroySelf();
           
           }
                 

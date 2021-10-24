@@ -13,6 +13,7 @@ public class SpiderWeb : MonoBehaviour
         }
         else if (collision.gameObject.GetComponent<Firebolt>())
         {
+            Debug.Log("Trigger");
             collision.gameObject.GetComponent<Firebolt>().DestroySelf();
             DestroySelf();
         }
@@ -38,6 +39,8 @@ public class SpiderWeb : MonoBehaviour
     public void DestroySelf()
     {
         FindObjectOfType<SFX>().CobwebSFX();
+        Debug.Log("Destroy Self");
+        GetComponent<Dirt>().Destroyed();
         gameObject.SetActive(false);
         Destroy(gameObject);       
     }

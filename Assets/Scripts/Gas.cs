@@ -29,6 +29,7 @@ public class Gas : MonoBehaviour
 
     public void DestroySelf()
     {
+        GetComponent<Dirt>().Destroyed();
         Destroy(gameObject);
     }
 
