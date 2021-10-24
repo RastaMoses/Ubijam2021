@@ -21,6 +21,7 @@ public class Game : MonoBehaviour
     {
         return currentMana;
     }
+
     
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class Game : MonoBehaviour
             dirtList.Add(i);
         }
         currentMana = maxMana;
+        Time.timeScale = 1;
     }
 
     public void UpdateDirtList()
@@ -74,6 +76,7 @@ public class Game : MonoBehaviour
             }
             else
             {
+                Debug.LogError("Time loss");
                 Lose();
                 timeRemaining = 0;
                 timerIsRunning = false;
@@ -95,6 +98,7 @@ public class Game : MonoBehaviour
 
     public void BookDestroyed()
     {
+        Debug.LogError("Book loss");
         Lose();
     }
     

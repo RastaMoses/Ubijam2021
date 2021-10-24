@@ -13,17 +13,18 @@ public class Book : MonoBehaviour
     {
         if (collision.GetComponent<Firebolt>() || collision.GetComponent<Rat>())
         {
-            Destroy(gameObject);
+            Destroyed();
         }
         else if (collision.GetComponent<Fire>())
         {
-            Destroy(gameObject);
+            Destroyed();
         }
         
     }
 
-    private void OnDestroy()
+    public void Destroyed()
     {
-        game.BookDestroyed();
+        game.UpdateDirtList();
+        Destroy(gameObject);
     }
 }
