@@ -11,6 +11,7 @@ public class RatSwarm : MonoBehaviour
     public void StartBurn()
     {
         isBurning = true;
+        FindObjectOfType<SFX>().BurnSFX();
         foreach (Rat i in ratList)
         {
             //Set AI change
@@ -33,7 +34,7 @@ public class RatSwarm : MonoBehaviour
 
         foreach (Rat i in ratList)
           {
-            Object.Destroy(i);
+            i.DestroySelf();
           
           }
                 

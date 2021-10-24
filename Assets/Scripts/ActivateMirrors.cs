@@ -59,6 +59,7 @@ public class ActivateMirrors : MonoBehaviour
 
     void MoveWalls()
     {
+        FindObjectOfType<SFX>().WallSFX();
         mwall.Activate();
     }
 

@@ -35,7 +35,8 @@ public class Teleport : MonoBehaviour
         else if(Vector2.Distance(transform.position, collision.transform.position) > distance)
 
         {
-            
+            FindObjectOfType<SFX>().TeleportSFX();
+
             Debug.Log("Teleport");
             collision.transform.position = new Vector2(destination.position.x, destination.position.y);
 

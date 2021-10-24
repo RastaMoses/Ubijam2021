@@ -39,6 +39,7 @@ public class Rat : MonoBehaviour
 
     public void DestroySelf()
     {
+        GetComponent<Dirt>().Destroyed();
         Destroy(gameObject);
     }
    
