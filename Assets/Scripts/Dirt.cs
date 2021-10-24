@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Dirt : MonoBehaviour
 {
-    
+    Game game;
+    private void Awake()
+    {
+        game = FindObjectOfType<Game>();
+    }
 
     private void OnDestroy()
     {
-        
-        FindObjectOfType<Game>().UpdateDirtList();
+        game.UpdateDirtList();
     }
 }
