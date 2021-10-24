@@ -5,7 +5,12 @@ using UnityEngine;
 public class Rat : MonoBehaviour
 {
     public bool isFrozen = false;
-   
+
+    private void Start()
+    {
+        GetComponent<ParticleSystem>().Stop();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponent<Fire>())
