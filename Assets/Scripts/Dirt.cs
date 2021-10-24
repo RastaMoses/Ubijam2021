@@ -10,8 +10,11 @@ public class Dirt : MonoBehaviour
         game = FindObjectOfType<Game>();
     }
 
-    private void OnDestroy()
+    public void Destroyed()
     {
+        Debug.Log("Dirt Destroy");
+        gameObject.SetActive(false);
         game.UpdateDirtList();
+        Destroy(gameObject);
     }
 }
