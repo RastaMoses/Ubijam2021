@@ -25,6 +25,7 @@ public class Firebolt : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
+            FindObjectOfType<SFX>().HitSFX();
             bounces++;
             if(bounces < 3)
             {

@@ -37,6 +37,7 @@ public class SpiderWeb : MonoBehaviour
 
     public void DestroySelf()
     {
+        FindObjectOfType<SFX>().CobwebSFX();
         gameObject.SetActive(false);
         Destroy(gameObject);       
     }

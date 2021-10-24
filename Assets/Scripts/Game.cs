@@ -95,6 +95,7 @@ public class Game : MonoBehaviour
 
     public void BookDestroyed()
     {
+        FindObjectOfType<SFX>().BookSFX();
         Lose();
     }
     

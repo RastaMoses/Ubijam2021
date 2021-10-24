@@ -15,6 +15,7 @@ public class Broom : MonoBehaviour
     
     public void SetNewTarget()
     {
+        FindObjectOfType<SFX>().BroomSFX();
         GetComponent<BesenMovement>().NewTarget();
         
             

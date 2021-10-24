@@ -19,6 +19,7 @@ public class FireCrystal : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<Firebolt>())
         {
+            FindObjectOfType<SFX>().FireSFX();
             GameObject fire = Instantiate(firePrefab, collision.transform.position, collision.transform.rotation);
             collision.transform.position = new Vector2(destination.position.x, destination.position.y);
             Rigidbody2D rb = fire.GetComponent<Rigidbody2D>();
