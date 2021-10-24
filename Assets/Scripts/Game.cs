@@ -9,9 +9,13 @@ public class Game : MonoBehaviour
     [SerializeField] int maxMana = 3;
     [SerializeField] List<Dirt> dirtList;
 
-    public float timeRemaining = 10;
+    [SerializeField] float timeRemaining;
     public bool timerIsRunning = false;
-    public Text timeText;
+    public bool win = false;
+
+    public GameObject playerUI;
+    public GameObject pauseUI;
+    public GameObject gameOverUI;
 
     public int GetMana()
     {
@@ -61,12 +65,12 @@ public class Game : MonoBehaviour
     }
     void Update()
     {
-        if(timerIsRunning)
+        if(timerIsRunning && win != true)
         {
             if(timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;
-                DisplayTime(timeRemaining);
+                
             }
             else
             {
@@ -76,12 +80,7 @@ public class Game : MonoBehaviour
             }
         }
     }
-    void DisplayTime(float timeToDisplay)
-    {
-        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        float milliSeconds = (timeToDisplay % 1) * 1000;
-        timeText.text = string.Format("{0:00}:{1:000}", seconds, milliSeconds);
-    }
+    
 
     
 
@@ -90,7 +89,8 @@ public class Game : MonoBehaviour
 
     void Win()
     {
-        print("Level Clear!");
+        Time.timeScale = 0f;
+        FindObjectOfType<SceneLoader>().LoadNextLevel();
     }
 
     public void BookDestroyed()
@@ -100,6 +100,9 @@ public class Game : MonoBehaviour
     
     void Lose()
     {
-        print("Game Over!");
+        Time.timeScale = 0f;
+        pauseUI.SetActive(false);
+        playerUI.SetActive(false);
+        gameOverUI.SetActive(true);
     }
 }
