@@ -20,6 +20,7 @@ public class RatSwarm : MonoBehaviour
             StartCoroutine(KillRat());
             i.GetComponent<RandomMovement>().SetTarget();
             i.GetComponentInChildren<Animator>().SetTrigger("startRun");
+            i.GetComponent<ParticleSystem>().Play();
         }
     }
     IEnumerator KillRat()
