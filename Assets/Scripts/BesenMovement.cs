@@ -31,7 +31,9 @@ public class BesenMovement : MonoBehaviour
             {
                 target = targetList[1].transform;
             }
-            target = targetList[0].transform;
+                      
+             target = targetList[0].transform;
+                        
         }
         aiSeeker.GetComponent<BesenAISeeker>().SetTarget(target);
     }
