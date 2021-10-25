@@ -33,8 +33,8 @@ public class Game : MonoBehaviour
         if (maxMana == 3)
         {
 
-            mana3.SetActive(true);
-            mana4.SetActive(false);
+            //mana3.SetActive(true);
+            //mana4.SetActive(false);
 
             Debug.Log("Render Mana");
             if (currentMana == 3)
@@ -56,8 +56,8 @@ public class Game : MonoBehaviour
         }
         if (maxMana == 4)
         {
-            mana4.SetActive(true);
-            mana3.SetActive(false);
+            //mana4.SetActive(true);
+            //mana3.SetActive(false);
             Debug.Log("Render Mana");
             if (currentMana == 3)
             {

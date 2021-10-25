@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMana: 0
-  maxMana: 4
+  maxMana: 3
   dirtList: []
   mana3: {fileID: 0}
   mana4: {fileID: 0}
