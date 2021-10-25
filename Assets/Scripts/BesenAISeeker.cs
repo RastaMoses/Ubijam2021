@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BesenAISeeker : MonoBehaviour
 {
-    [SerializeField] GameObject target;
+    GameObject target;
     public void SetTarget(Transform newTarget)
     {
         target = newTarget.gameObject;
