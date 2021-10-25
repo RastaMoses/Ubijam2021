@@ -704,6 +704,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelBasics
       objectReference: {fileID: 0}
+    - target: {fileID: 6617717021300736401, guid: f6547dde58700504ab4dafabb0ec46ef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.558178
+      objectReference: {fileID: 0}
+    - target: {fileID: 7059102552753639092, guid: f6547dde58700504ab4dafabb0ec46ef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.66
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6547dde58700504ab4dafabb0ec46ef, type: 3}
 --- !u!1 &694872578
