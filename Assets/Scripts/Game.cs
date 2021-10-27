@@ -12,7 +12,8 @@ public class Game : MonoBehaviour
     [SerializeField] GameObject mana3;
     [SerializeField] GameObject mana4;
 
-    [SerializeField] Image[] manaSprites;
+    [SerializeField] Image[] manaSprites3;
+    [SerializeField] Image[] manaSprites4;
     [SerializeField] Sprite manaGrey;
 
     [SerializeField] float timeRemaining = 10f;
@@ -33,8 +34,8 @@ public class Game : MonoBehaviour
         if (maxMana == 3)
         {
 
-            //mana3.SetActive(true);
-            //mana4.SetActive(false);
+            mana3.SetActive(true);
+            mana4.SetActive(false);
 
             Debug.Log("Render Mana");
             if (currentMana == 3)
@@ -43,38 +44,38 @@ public class Game : MonoBehaviour
             }
             else if (currentMana == 2)
             {
-                manaSprites[0].sprite = manaGrey;
+                manaSprites3[0].sprite = manaGrey;
             }
             else if (currentMana == 1)
             {
-                manaSprites[1].sprite = manaGrey;
+                manaSprites3[1].sprite = manaGrey;
             }
             else
             {
-                manaSprites[2].sprite = manaGrey;
+                manaSprites3[2].sprite = manaGrey;
             }
         }
         if (maxMana == 4)
         {
-            //mana4.SetActive(true);
-            //mana3.SetActive(false);
+            mana4.SetActive(true);
+            mana3.SetActive(false);
             Debug.Log("Render Mana");
             if (currentMana == 3)
             {
-                manaSprites[0].sprite = manaGrey;
-                manaSprites[0].color = Color.white;
+                manaSprites4[0].sprite = manaGrey;
+                
             }
             else if (currentMana == 2)
             {
-                manaSprites[1].sprite = manaGrey;
+                manaSprites4[1].sprite = manaGrey;
             }
             else if (currentMana == 1)
             {
-                manaSprites[2].sprite = manaGrey;
+                manaSprites4[2].sprite = manaGrey;
             }
             else if (currentMana==0)
             {
-                manaSprites[3].sprite = manaGrey;
+                manaSprites4[3].sprite = manaGrey;
             }
         }
 

@@ -708,6 +708,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.558178
       objectReference: {fileID: 0}
+    - target: {fileID: 6617717021300736406, guid: f6547dde58700504ab4dafabb0ec46ef, type: 3}
+      propertyPath: img
+      value: 
+      objectReference: {fileID: 1382880896}
     - target: {fileID: 7059102552753639092, guid: f6547dde58700504ab4dafabb0ec46ef, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.66
@@ -1442,6 +1446,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6539880185297568362, guid: 4a76bca74a1ac31409f8fa5e4bc6bd93, type: 3}
   m_PrefabInstance: {fileID: 1274069886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1382880896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8993447775634380830, guid: f6547dde58700504ab4dafabb0ec46ef, type: 3}
+  m_PrefabInstance: {fileID: 618451322}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1450027588
 PrefabInstance:

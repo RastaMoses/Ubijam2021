@@ -48,7 +48,12 @@ MonoBehaviour:
   dirtList: []
   mana3: {fileID: 0}
   mana4: {fileID: 0}
-  manaSprites:
+  manaSprites3:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  manaSprites4:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
