@@ -7993,6 +7993,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4780448066045239049}
     m_Modifications:
+    - target: {fileID: 1063489342041840466, guid: c4eaac235b200d245a5dd7dff9e65643, type: 3}
+      propertyPath: m_Volume
+      value: 0.45
+      objectReference: {fileID: 0}
     - target: {fileID: 3171109239132272954, guid: c4eaac235b200d245a5dd7dff9e65643, type: 3}
       propertyPath: sfxSlider
       value: 
@@ -8147,7 +8151,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8871369999715105228, guid: cb9c4e82655f4c342894226a53a4b6cc, type: 3}
       propertyPath: m_Volume
-      value: 0.49
+      value: 0.31
       objectReference: {fileID: 0}
     - target: {fileID: 8871369999715105229, guid: cb9c4e82655f4c342894226a53a4b6cc, type: 3}
       propertyPath: m_Name
@@ -8229,7 +8233,7 @@ PrefabInstance:
       objectReference: {fileID: 4916332032841287768}
     - target: {fileID: 7983291960720222922, guid: d683a305d112baa44a0cfd3f8602f009, type: 3}
       propertyPath: maxMana
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7983291960720222922, guid: d683a305d112baa44a0cfd3f8602f009, type: 3}
       propertyPath: pauseUI
