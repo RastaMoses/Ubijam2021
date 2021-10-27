@@ -678,6 +678,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1095633688272685695, guid: b0dcbc44db4ff2d44a991292b8c93824, type: 3}
+      propertyPath: m_Name
+      value: Kleiderschrank
+      objectReference: {fileID: 0}
     - target: {fileID: 2826638498446984818, guid: 0899d623d18994d4b9e4102ba1fc153b, type: 3}
       propertyPath: m_Name
       value: SpiderWebs (1) Variant
@@ -725,10 +729,6 @@ PrefabInstance:
     - target: {fileID: 2826638498446984829, guid: 0899d623d18994d4b9e4102ba1fc153b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.0579834
-      objectReference: {fileID: 0}
-    - target: {fileID: 1095633688272685695, guid: b0dcbc44db4ff2d44a991292b8c93824, type: 3}
-      propertyPath: m_Name
-      value: Kleiderschrank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0899d623d18994d4b9e4102ba1fc153b, type: 3}
@@ -796,6 +796,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3214947320166512196, guid: f6547dde58700504ab4dafabb0ec46ef, type: 3}
+      propertyPath: maxMana
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4780448066045239049, guid: f6547dde58700504ab4dafabb0ec46ef, type: 3}
       propertyPath: m_RootOrder
       value: 13
