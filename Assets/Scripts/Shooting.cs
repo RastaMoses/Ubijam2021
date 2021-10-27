@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Shooting : MonoBehaviour
 {
@@ -12,10 +13,19 @@ public class Shooting : MonoBehaviour
     public float bulletForce = 20f;
     void Update()
     {
+
         //if (shoot == true)
-        {
+        
+            
             if (Input.GetButtonDown("Fire1"))
             {
+                if (EventSystem.current.IsPointerOverGameObject())
+                {
+                    Debug.Log("Mouse over UI elements");
+                    return;
+                }
+
+
                 var game = FindObjectOfType<Game>();
                 int mana = game.GetMana();
                 if (mana > 0)
@@ -27,7 +37,7 @@ public class Shooting : MonoBehaviour
                     img.gameObject.SetActive(false);
                 }
             }
-        }
+        
     }
 
     void Shoot()
