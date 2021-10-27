@@ -5,6 +5,7 @@ using UnityEngine;
 public class Potion : MonoBehaviour
 {
     [SerializeField] GameObject gasPrefab;
+    [SerializeField] bool ratCollision;
     public void GasCloud()
     {
         FindObjectOfType<SFX>().GasSFX();
@@ -21,8 +22,12 @@ public class Potion : MonoBehaviour
         }
         if (collision.GetComponent<Rat>())
         {
-            GasCloud();
-            collision.GetComponent<Rat>().DestroySelf();
+            if (ratCollision)
+            {
+                GasCloud();
+                collision.GetComponent<Rat>().DestroySelf();
+            }
+            
         }
     }
 }
