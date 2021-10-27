@@ -15,7 +15,6 @@ public class BesenAISeeker : MonoBehaviour
         
         if(target.gameObject == null)
         {
-            Debug.Log("No Besen Target");
             FindObjectOfType<BesenMovement>().NewTarget();
         }
         else
