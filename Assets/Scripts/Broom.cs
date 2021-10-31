@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Broom : MonoBehaviour
 {
+    public bool active;
     bool alreadyTimed;
     [SerializeField] float idleTimer = 5f;
     private void Start()
@@ -24,33 +25,45 @@ public class Broom : MonoBehaviour
     {
         
         yield return new WaitForSeconds(idleTimer);
-        if (transform.position == GetComponent<BesenMovement>().target.transform.position)
+        if (active) 
         {
-            GetComponent<BesenMovement>().NewTarget();
-            if (alreadyTimed)
+            if (transform.position == GetComponent<BesenMovement>().target.transform.position)
             {
-                yield return null;
-                Destroy(gameObject);
+                GetComponent<BesenMovement>().NewTarget();
+                if (alreadyTimed)
+                {
+                    yield return null;
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    alreadyTimed = true;
+                    yield return broomTimer();
+                }
+
             }
             else
             {
-                alreadyTimed = true;
                 yield return broomTimer();
             }
-
+            Debug.Log("nope");
         }
         else
         {
             yield return broomTimer();
         }
-        Debug.Log("nope");
+        
     }
     public void Freeze()
     {     
-        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-        Debug.Log("hit");
-        GetComponent<Pathfinding.AIPath>().enabled = false;
-        GetComponent<RatMovement>().enabled = false;
+        if (active)
+        {
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            Debug.Log("hit");
+            GetComponent<Pathfinding.AIPath>().enabled = false;
+            GetComponent<BesenMovement>().enabled = false;
+        }
+        
     }
 
     

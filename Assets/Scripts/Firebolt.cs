@@ -47,6 +47,7 @@ public class Firebolt : MonoBehaviour
         if (collision.gameObject.GetComponent<Pathfinding.AIPath>())
         {
             collision.gameObject.GetComponent<Pathfinding.AIPath>().enabled = true;
+            collision.gameObject.GetComponent<Broom>().active = true;
             DestroySelf();
         }
     }

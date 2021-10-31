@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6795658734684342475}
   - component: {fileID: 6795658734684342474}
   - component: {fileID: -6709726949919711517}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e59da16ef12bb064fa81d73563645053, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab6fd66d99d6f1945b04864fd81a8082, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

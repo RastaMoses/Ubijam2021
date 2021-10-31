@@ -24,9 +24,16 @@ public class BesenMovement : MonoBehaviour
         if (targetList.Length == 0)
         {
             target = transform;
+            
+            GetComponent<Animator>().SetBool("Moving", false);
         }
         else
         {
+            if (GetComponent<Broom>().active)
+            {
+                GetComponent<Animator>().SetBool("Moving", true);
+            }
+            
             if(targetList[0] == null)
             {
                 target = targetList[1].transform;

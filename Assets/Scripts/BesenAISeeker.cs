@@ -13,7 +13,7 @@ public class BesenAISeeker : MonoBehaviour
     void Update()
     {
         
-        if(target.gameObject == null)
+        if(target == null)
         {
             FindObjectOfType<BesenMovement>().NewTarget();
         }

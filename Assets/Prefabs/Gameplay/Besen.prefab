@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 880abdcdb65990b429569141c68bd8a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30d5b966d1e7e1645b15fd086aa5f123, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 6902954214546037204}
   - component: {fileID: 6902954214546037205}
   - component: {fileID: 1712128223}
+  - component: {fileID: 8381105371710504027}
   m_Layer: 0
   m_Name: Besen
   m_TagString: Untagged
@@ -208,18 +209,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6902954214546037039}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 0.38
+  radius: 0.32
   height: 0.01
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 1
+  maxSpeed: 2
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -265,7 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 4381976304470984145}
   speed: 3
-  circleRadius: 4
+  circleRadius: 2.5
   targetList: []
   targetLayer:
     serializedVersion: 2
@@ -291,7 +292,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!70 &6902954214546037205
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -320,7 +321,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ecd773e5691744d81abf8e10ffa0d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
   idleTimer: 5
+--- !u!95 &8381105371710504027
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6902954214546037039}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c17d56db5221f84fba6bba817807327, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &915770483489186373
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ public class WallMovement : MonoBehaviour
     {
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
