@@ -10,14 +10,26 @@ public class Music : MonoBehaviour
     AudioSource audioSource;
     private void Awake()
     {
-        if (!NewMusic)
-        {
+        
             int gameObjectCount = FindObjectsOfType<Music>().Length;
             if (gameObjectCount > 1)
             {
-
-                Destroy(gameObject);
-                gameObject.SetActive(false);
+                if (!NewMusic)
+                {
+                    Destroy(gameObject);
+                    gameObject.SetActive(false);
+                }
+                else
+                {
+                    foreach (Music i in FindObjectsOfType<Music>())
+                    {
+                        if(i.gameObject != gameObject)
+                        {
+                            Destroy(i.gameObject);
+                            i.gameObject.SetActive(false);
+                        }
+                    }
+                }
             }
             else
             {
@@ -25,7 +37,7 @@ public class Music : MonoBehaviour
             }
 
             
-        }
+        
         audioSource = GetComponent<AudioSource>();
         musicSlider.value = 0.5f;
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", .5f);
